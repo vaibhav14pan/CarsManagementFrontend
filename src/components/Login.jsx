@@ -1,6 +1,7 @@
 // src/components/Login.jsx
 import React, { useState } from 'react';
 import { useAuth } from './Auth';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -48,6 +49,15 @@ const Login = () => {
                         Sign In
                     </button>
                 </form>
+                <div className="mt-4 text-center">
+                    <span>Don't have an account? </span>
+                    <Link
+                        to="/signup"
+                        className="text-indigo-600 hover:underline"
+                    >
+                        Sign Up
+                    </Link>
+                </div>
             </div>
         </div>
     );
